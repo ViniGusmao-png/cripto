@@ -1,0 +1,124 @@
+.contair{
+    margin: 0 14px;
+}
+
+.form{
+    width: 100%;
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+}
+.form input{
+    width: 40%;
+    height: 44px;
+    border-radius: 8px;
+    padding: 0 8px;
+    outline: none;
+    border: 0;
+}
+.form button{
+    background: transparent;
+    border: 0;
+}
+
+table{
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0 14px;
+}
+.tr{
+    background-color: rgb(250, 84, 55) ;
+}
+
+td:first-child,
+th:first-child{
+    border-radius: 8px 0 0 8px;
+}
+td:last-child,
+th:last-child{
+    border-radius: 8px 0 0 8px;
+}
+table th{
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.tdLabel span{
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+}
+
+.tdLabel, .tdProfit, .tdLoss{
+    color: #1f1f1f;
+}
+
+.tdprofit{
+    color: #0dc200;
+}
+.tdLoss{
+    color: rgb(255, 255, 255);
+}
+
+.link{
+     text-decoration: none;
+     color: black;
+     transition: color 0.5s;
+}
+
+.link:hover{
+    color: rgb(68, 68, 255);
+}
+
+table th,
+table td{
+    padding: 14px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    table{
+        border: 0px;
+    }
+    
+    table thead{
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        overflow: hidden; 
+        padding: 0;
+        position: absolute;
+        margin: -1px;
+        width: 1px;
+    }
+    .tr{
+        border-bottom: 1px solid #ff0000;
+        display: block;
+        margin-bottom: 14px;
+    }
+    table td{
+        border-bottom: 1px solid rgba(163, 0, 0, 0.774);
+        display: block;
+        font-size: 14px;
+        text-align: right;
+    }
+
+    td:first-child,
+    th:first-child{
+        border-radius: 0;
+    }
+    td:last-child,
+    th:last-child{
+        border-radius: 0;
+    }
+    table td::before{
+        content:attr(data-label);
+        float: left;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+    }
+}
